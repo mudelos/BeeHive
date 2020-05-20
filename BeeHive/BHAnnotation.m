@@ -73,10 +73,10 @@ NSArray<NSString *>* BHReadConfiguration(char *sectionName,const struct mach_hea
     for(int idx = 0; idx < counter; ++idx){
         char *string = (char*)memory[idx];
         if(!string)continue;
-//        NSString *str = [NSString stringWithUTF8String:string];
-//        if(!str)continue;
-//        BHLog(@"config = %@", str);
-//        if(str) [configs addObject:str];
+        NSString *str = [NSString stringWithUTF8String:string];
+        if(!str)continue;
+        BHLog(@"config = %@", str);
+        if(str) [configs addObject:str];
     }
     
     return configs;
